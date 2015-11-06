@@ -68,16 +68,15 @@
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
 
-
 function calVert(){
 
-  var x = parseInt(document.getElementById("srVert").value);
-  var y = parseInt(document.getElementById("arVert").value);
-  var totalVert = (y - x);
-  document.getElementById("totalVert").innerHTML = "Your vertical is" + " " + totalVert + " " + "cm" + " or " ;
+  var x = document.getElementById("srVert").value;
+  var y = document.getElementById("arVert").value;
+  var totalVertCm = (y - x);
+  var totalVertIn = (y - x) / 2.54;
+  document.getElementById("totalVert").innerHTML = "Your vertical is" + " " + totalVertCm.toFixed(2) + " " + "cm" + " or " + totalVertIn.toFixed(2) + " " + "inch";
 }
 </script>
-
 
 </body>
 </html>
