@@ -4,3 +4,17 @@ body {
   padding-top: 50px;
 }
 
+.vertical{
+	float: right;
+	padding: 10px 40px 10px;
+	border: solid 2px;
+}
+
+#vert input {
+	padding: 2px 2px;
+	margin: 5px 5px;
+}
+
+#vert button {
+	margin-left: 4px;
+}

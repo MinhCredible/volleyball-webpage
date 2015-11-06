@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-<title>Volley-Madness</title>
+<title>MinhCredible</title>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -47,9 +47,37 @@
   </div>
 </div><!-- /.container -->
 
+<div class="container">
+  <div id="vertical1" class="vertical">
+    <h2>Calculate your vertical</h2>
+  <form id="vert">
+    <div>  
+      <input  type='text' id="srVert" />Standing Reach(cm)<br>
+      <input  type='text' id="arVert" />Approach Reach(cm)<br>
+      <input type="button" value="Calculate"  onclick="calVert()" /><br>
+      <label for="totalVert" id="totalVert"></label>
+      <label for="inch" id="inch"></label>
+    </div>
+  </form>
+  </div>
+</div>
+
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+
+
+function calVert(){
+
+  var x = parseInt(document.getElementById("srVert").value);
+  var y = parseInt(document.getElementById("arVert").value);
+  var totalVert = (y - x);
+  document.getElementById("totalVert").innerHTML = "Your vertical is" + " " + totalVert + " " + "cm" + " or " ;
+}
+</script>
+
+
 </body>
 </html>
